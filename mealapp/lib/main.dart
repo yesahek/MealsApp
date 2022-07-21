@@ -17,9 +17,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +32,7 @@ class MyHomePage extends StatelessWidget {
         title: const Text('DeliMeals'),
       ),
       body: const Center(
-        child: Text('Navigation Time!'),
+        child: Text('Navigation Time'),
       ),
     );
   }
